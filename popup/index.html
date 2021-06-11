@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    body{
+      font-family: Arial;
+      min-width: 300px;
+      max-width: 500px;
+    }
+    .row {
+        align-items: center;
+        display: flex;
+        margin: 10px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #888;
+    }
+    .row > div {
+      cursor: pointer;
+      min-width: 50px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+    .row > div:last-child {
+      text-align: left;
+    }
+    .checkTodo{
+      visibility: hidden;
+    }
+    .IAmDone > div:last-child {
+      text-decoration : line-through;
+    }
+    .IAmDone .checkTodo{
+      visibility: visible;
+    }
+    #taskMaker {
+      position: relative;
+    }
+    .addTask {
+        cursor: pointer;
+        display: block;
+        background: rgb(0, 132, 255);
+        text-align: center;
+        padding: 10px 10px;
+        color: #fff;
+        border-radius: 50px 20px;
+    }
+    textarea {
+        width: calc(100% - 12px);
+        min-height: 50px;
+        border: 1px solid #b8b8b8;
+        padding: 5px;
+    }
+    h1 {
+      display:inline;
+      float: left;
+      padding-left: 15px;
+      text-shadow: 5px 5px 5px #333333;
+      text-align: center;
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+    h3 {
+      font-family: "Lucida Console", "Courier New", monospace;
+    }
+    img {
+      padding: 15px;
+      display:inline;
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="title">
+    <img src="/icons/todo.png" alt="icons">
+    <h1>To-Do-List</h1>
+  </div>
+  
+  <div id="taskMaker">
+    <textarea placeholder="What to do!"></textarea>
+
+    <h4>
+      <i style="font-size:24px" class="fa">&#xf017;</i> Due Time:
+    <select id="hours"></select>
+    :
+    <select id="minutes"></select>
+   
+    </h4>
+    
+    
+    <a class="addTask">SAVE TASK</a>
+  </div>
+
+  <div id="taskList">
+    <h3>Task List</h3>
+    <hr>
+  </div>
+  
+  <div id="todosHolder">
+
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
