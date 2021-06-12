@@ -4,14 +4,6 @@
   "name": "To-Do-List",
   "version": "2.0",
   "homepage_url": "https://github.com/EngKhong1006/extension.git",
-  "icons": {
-    "32": "icons/todo.png"
-  },
-  "applications": {
-    "gecko": {
-      "id": "{993d7fd9-f6ba-434a-9949-2483488a8db6}"
-    }
-  },
   "browser_action": {
     "default_icon": "icons/todo.png",
     "default_title": "To-Do-List",
